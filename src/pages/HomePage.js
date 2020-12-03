@@ -92,9 +92,9 @@ class HomePage extends Component {
     this.setCovid19data(query_country_name);  
   }
 	render(){      
-      let {covid19Items}=this.state;              
+      let {covid19Items}=this.state;          
   return (    
-    <div>              
+    <div>                    
       <LoadingSpinnerComponent />                                 
             {this.showCovid19List(covid19Items)}
     </div>
