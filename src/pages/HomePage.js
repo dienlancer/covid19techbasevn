@@ -13,10 +13,11 @@ class HomePage extends Component {
       covid19Items:[],                
     }
   }  
-  showCovid19List(covid19Items){        
-    let xhtml=null;
+  showCovid19List(covid19Items){ 
+    let covid19Html=null;           
     if(covid19Items.length > 0){
-      xhtml=covid19Items.map((covid19Item,index)=>{
+      let trHtml=null;
+      trHtml=covid19Items.map((covid19Item,index)=>{
         let covid19ItemDate=<Moment format="MM/DD/YYYY">
                 {covid19Item.Date}
             </Moment>
@@ -35,8 +36,8 @@ class HomePage extends Component {
           </tr>
         )
       });
-      return (
-        <table className="table">
+      covid19Html= 
+        (<table className="table">
         <thead className="thead-dark">
           <tr>
             <th scope="col">Cases</th>
@@ -52,15 +53,15 @@ class HomePage extends Component {
           </tr>
         </thead>
         <tbody>          
-          {xhtml}
+          {trHtml}
         </tbody>
-        </table>
-      )
+        </table>);
+      
     }else{
-      return (
-        <h3 className="text-center">No data</h3>
-      )
+      covid19Html= (<h3 className="text-center">No data</h3>);
+      
     }
+    return covid19Html;
   }
   setCovid19data(countrySlug){          
     if(countrySlug !== ""){
@@ -94,7 +95,7 @@ class HomePage extends Component {
 	render(){      
       let {covid19Items}=this.state;          
   return (    
-    <div>                    
+    <div>                          
       <LoadingSpinnerComponent />                                 
       {this.showCovid19List(covid19Items)}
     </div>
