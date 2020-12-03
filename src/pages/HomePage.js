@@ -17,7 +17,7 @@ class HomePage extends Component {
     let xhtml=null;
     if(covid19Items.length > 0){
       xhtml=covid19Items.map((covid19Item,index)=>{
-        let ngay=<Moment format="MM/DD/YYYY">
+        let covid19Date=<Moment format="MM/DD/YYYY">
                 {covid19Item.Date}
             </Moment>
         return (
@@ -27,7 +27,7 @@ class HomePage extends Component {
           <td >{covid19Item.CityCode}</td>
           <td >{covid19Item.Country}</td>
           <td >{covid19Item.CountryCode}</td>
-          <td >{ngay}</td>
+          <td >{covid19Date}</td>
           <td >{covid19Item.Lat}</td>
           <td >{covid19Item.Lon}</td>
           <td >{covid19Item.Province}</td>
