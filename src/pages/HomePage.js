@@ -96,7 +96,7 @@ class HomePage extends Component {
   return (    
     <div>                    
       <LoadingSpinnerComponent />                                 
-            {this.showCovid19List(covid19Items)}
+      {this.showCovid19List(covid19Items)}
     </div>
   );
   }
