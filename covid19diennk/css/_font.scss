@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'StandardBold' ;
+    src: 	url( '../fonts/standard-font/Standard-Bold.eot' ) ,
+    		url( '../fonts/standard-font/standard-bold.otf' ),
+	    	url( '../fonts/standard-font/Standard-Bold.ttf' ),
+	    	url( '../fonts/standard-font/Standard-Bold.woff' ),
+	    	url( '../fonts/standard-font/Standard-Bold.woff2' );
+}
+@font-face {
+    font-family: 'StandardBoldItalic' ;
+    src: 	url( '../fonts/standard-font/Standard-BoldItalic.eot' ),
+		    url( '../fonts/standard-font/standard-bold-italic.otf' ),
+		    url( '../fonts/standard-font/Standard-BoldItalic.ttf' ),
+		    url( '../fonts/standard-font/Standard-BoldItalic.woff' ),
+		    url( '../fonts/standard-font/Standard-BoldItalic.woff2' ) ;
+}
+@font-face {
+    font-family: 'StandardBook' ;
+    src: 	url( '../fonts/standard-font/Standard-Book.eot' ),
+		    url( '../fonts/standard-font/standard-book.otf' ),
+		    url( '../fonts/standard-font/Standard-Book.ttf' ),
+		    url( '../fonts/standard-font/Standard-Book.woff' ),
+		    url( '../fonts/standard-font/Standard-Book.woff2' ) ;
+}
+@font-face {
+    font-family: 'StandardBookItalic' ;
+    src: 	url( '../fonts/standard-font/Standard-BookItalic.eot' ),
+		    url( '../fonts/standard-font/standard-book-italic.otf' ),
+		    url( '../fonts/standard-font/Standard-BookItalic.ttf' ),
+		    url( '../fonts/standard-font/Standard-BookItalic.woff' ),
+		    url( '../fonts/standard-font/Standard-BookItalic.woff2' ) ;
+}
+$f_StandardBold:'StandardBold', sans-serif;
+$f_StandardBoldItalic:'StandardBoldItalic', sans-serif;
+$f_StandardBook:'StandardBook', sans-serif;
+$f_StandardBookItalic:'StandardBookItalic', sans-serif;
+
