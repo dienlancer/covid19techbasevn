@@ -1,8 +1,8 @@
-export const fetchWithDelay = (url) => {
+export const fetchWithDelay = (url,meth) => {
     const promise = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(fetch(url, {
-          method: 'GET',
+          method: meth,
         })
           .then((response) => response.json()));
       }, 3000)

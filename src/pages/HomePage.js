@@ -4,7 +4,7 @@ import { trackPromise } from 'react-promise-tracker';
 import Moment from 'react-moment';
 import 'moment-timezone';
 import {actShowNotify,actHideNotify} from "./../actions/index";
-import {covid19API} from "./../api/covid19API";
+import {fetchWithDelay} from "./../api/fetch";
 import {LoadingSpinnerComponent} from "./../components/LoadingSpinnerComponent";
 class HomePage extends Component {
   constructor(props){
@@ -68,7 +68,7 @@ class HomePage extends Component {
       let data=[];
       let url="https://api.covid19api.com/country/"+countrySlug+"/status/confirmed";
     trackPromise(
-      covid19API.fetchCovid19(url)
+      fetchWithDelay(url,"GET")
         .then((covid19DataResponse) => {                
           if(covid19DataResponse.message == null){
             data =covid19DataResponse.map((item,index)=>{            
