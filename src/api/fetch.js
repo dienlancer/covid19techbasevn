@@ -7,6 +7,5 @@ export const fetchWithDelay = (url) => {
           .then((response) => response.json()));
       }, 3000)
     });
-  
     return promise;
   }

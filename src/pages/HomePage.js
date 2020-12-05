@@ -10,7 +10,7 @@ class HomePage extends Component {
   constructor(props){
     super(props);
     this.state={
-      covid19Items:[],                
+      covid19Items:[]            
     }
   }  
   showCovid19List(covid19Items){ 
@@ -69,7 +69,7 @@ class HomePage extends Component {
       let url="https://api.covid19api.com/country/"+countrySlug+"/status/confirmed";
     trackPromise(
       covid19API.fetchCovid19(url)
-        .then((covid19DataResponse) => {          
+        .then((covid19DataResponse) => {                
           if(covid19DataResponse.message == null){
             data =covid19DataResponse.map((item,index)=>{            
               return item;
@@ -93,9 +93,9 @@ class HomePage extends Component {
     this.setCovid19data(query_country_name);  
   }
 	render(){      
-      let {covid19Items}=this.state;          
-  return (    
-    <div>                          
+      let {covid19Items}=this.state;                      
+  return (        
+    <div>                 
       <LoadingSpinnerComponent />                                 
       {this.showCovid19List(covid19Items)}
     </div>
