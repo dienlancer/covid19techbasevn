@@ -24,7 +24,7 @@ class FormSearch extends Component {
 	handleHideNotify=()=>{		
 		this.props.hideNotify();
 	}
-	render(){											
+	render(){				
 		return (
 			<form className="form-search">					
               <div className="form-group">	
@@ -40,11 +40,6 @@ class FormSearch extends Component {
 			);
 		}
 }
-const mapStateToProps = state => {	
-    return {
-        query_country_name: state.search
-    }
-}
 const mapDispatchToProps = (dispatch, ownProps) => {	
     return {		
         goSearch: (query_country_name) => {			
@@ -58,4 +53,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 		}
     }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(FormSearch);
+export default connect(null,mapDispatchToProps)(FormSearch);
